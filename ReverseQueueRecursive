@@ -1,0 +1,13 @@
+class GfG{
+    //Function to reverse the queue.
+    
+    public Queue<Integer> rev(Queue<Integer> q){
+        if(q.isEmpty()) return q;
+        int start = q.peek();
+        q.remove();
+        q = rev(q);
+        q.add(start);
+        
+        return q;
+    }
+}
